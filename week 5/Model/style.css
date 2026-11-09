@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(rgba(20, 70, 45, 0.3), rgba(20, 70, 45, 0.3)),
+  url("green-background.png") center / cover no-repeat fixed;
+  color: #045605;
+  font-family: Arial, sans-serif;
+}
+
+.journal {
+  width: min(900px, 100%);
+}
+
+.journal-header {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  color: #253422;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.journal-header h1 {
+  margin-bottom: 12px;
+  color: #094912;
+  font-size: clamp(32px, 6vw, 52px);
+}
+
+.introduction {
+  color: #3f6343;
+  font-size: 18px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.show-modal {
+  min-height: 190px;
+  padding: 24px;
+  border: 1px solid #badbaa;
+  border-radius: 18px;
+  background: #f7fff3;
+  color: #2c3b2e;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.show-modal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px #3b70451a;
+}
+
+.card-number,
+.card-title,
+.card-description {
+  display: block;
+}
+
+.card-number {
+  margin-bottom: 24px;
+  color: #59a86d;
+  font-size: 14px;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  color: #2b4b2f;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card-description {
+  color: #5d7662;
+  line-height: 1.5;
+}
+
+.journal-footer {
+  margin-top: 28px;
+  color: #39473b;
+  text-align: center;
+  font-size: 14px;
+}
+
+.modal {
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: min(550px, calc(100% - 36px));
+  padding: 48px;
+  border: 1px solid #e4d7c5;
+  border-radius: 20px;
+  background: #fffdf9;
+  box-shadow: 0 20px 60px #392b1f33;
+  transform: translate(-50%, -50%);
+}
+
+.modal h2 {
+  margin-bottom: 16px;
+  color: #2d4b2b;
+  font-size: 30px;
+}
+
+.modal > p:last-child {
+  color: #5d7661;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.close-modal {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  border: 0;
+  background: transparent;
+  color: #6a5847;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  background: #184f24cc;
+  backdrop-filter: blur(3px);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .show-modal {
+    min-height: 150px;
+  }
+
+  .modal {
+    padding: 42px 26px 30px;
+  }
+}

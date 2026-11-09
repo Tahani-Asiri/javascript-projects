@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tahani's Learning Journal</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="journal">
+      <header class="journal-header">
+        <p class="eyebrow">LEARN · PRACTICE · GROW</p>
+
+        <h1>Tahani's Learning Journal</h1>
+
+        <p class="introduction">
+          A little about me, what I have learned, and where I am going.
+        </p>
+      </header>
+
+      <!-- كل Button يحمل عنوانًا ومحتوى مختلفًا -->
+      <div class="cards">
+        <button
+          type="button"
+          class="show-modal"
+          data-title="About Me"
+          data-text="My name is Tahani Asiri. I am a software developer interested in web development and cybersecurity. I enjoy learning through practice and solving problems."
+        >
+          <span class="card-number">01</span>
+          <span class="card-title">About Me</span>
+          <span class="card-description">Meet the person behind the code.</span>
+        </button>
+
+        <button
+          type="button"
+          class="show-modal"
+          data-title="My Skills"
+          data-text="I use HTML to build page structure, CSS to design layouts, and JavaScript to add interaction. I am practicing functions, arrays, objects, DOM manipulation, and events."
+        >
+          <span class="card-number">02</span>
+          <span class="card-title">My Skills</span>
+          <span class="card-description">Explore what I am learning.</span>
+        </button>
+
+        <button
+          type="button"
+          class="show-modal"
+          data-title="My Next Goal"
+          data-text="My next goal is to build Pig Game and improve my understanding of JavaScript. I want to write clear code, test my projects, and explain how each part works."
+        >
+          <span class="card-number">03</span>
+          <span class="card-title">My Next Goal</span>
+          <span class="card-description">Discover the next step in my journey.</span>
+        </button>
+      </div>
+
+      <footer class="journal-footer">
+        Created by Tahani Asiri · Week 5
+      </footer>
+    </main>
+
+    <!-- JavaScript يضع محتوى Button المختار داخل النافذة -->
+    <div
+      class="modal hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      aria-describedby="modal-text"
+      tabindex="-1"
+    >
+      <button
+        type="button"
+        class="close-modal"
+        aria-label="Close window"
+      >
+        &times;
+      </button>
+
+      <p class="eyebrow">MY LEARNING JOURNEY</p>
+      <h2 id="modal-title"></h2>
+      <p id="modal-text"></p>
+    </div>
+
+    <div class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

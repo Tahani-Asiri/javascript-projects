@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  color: #123d2a;
+  background: linear-gradient(135deg, #d8f3dc, #95d5b2, #40916c);
+}
+
+main {
+  position: relative;
+  display: flex;
+  width: min(100rem, 100%);
+  min-height: 60rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 2rem;
+  background: rgba(240, 255, 244, 0.88);
+  box-shadow: 0 2rem 5rem rgba(18, 61, 42, 0.22);
+  backdrop-filter: blur(8px);
+}
+
+.player {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 3rem 4rem;
+  transition: background-color 0.4s;
+}
+
+.player--0 {
+  background: rgba(216, 243, 220, 0.78);
+}
+
+.player--1 {
+  background: rgba(183, 228, 199, 0.58);
+}
+
+.player--active {
+  background: rgba(149, 213, 178, 0.55);
+}
+
+.name {
+  margin-bottom: 1rem;
+  color: #276749;
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.score {
+  margin-bottom: auto;
+  color: #123d2a;
+  font-size: 7rem;
+  font-weight: 400;
+}
+
+.player--active .name {
+  color: #123d2a;
+}
+
+.player--active .name::after {
+  content: " •";
+  color: #40916c;
+}
+
+.player--current {
+  width: 65%;
+  padding: 1.8rem 2rem;
+  border-radius: 1.2rem;
+  background: linear-gradient(135deg, #2d6a4f, #40916c);
+  color: #f0fff4;
+  text-align: center;
+}
+
+.current-label {
+  margin-bottom: 0.5rem;
+  color: #d8f3dc;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.current-score {
+  color: #ffffff;
+  font-size: 3.2rem;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(45, 106, 79, 0.15);
+  border-radius: 3rem;
+  background: rgba(240, 255, 244, 0.92);
+  color: #123d2a;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 0.8rem 1.8rem rgba(18, 61, 42, 0.16);
+  transform: translateX(-50%);
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  background: #ffffff;
+  box-shadow: 0 1rem 2rem rgba(18, 61, 42, 0.22);
+  transform: translate(-50%, -2px);
+}
+
+.btn:active {
+  box-shadow: 0 0.5rem 1rem rgba(18, 61, 42, 0.16);
+  transform: translate(-50%, 1px);
+}
+
+.btn--new {
+  top: 3rem;
+}
+
+.btn--roll {
+  bottom: 14rem;
+}
+
+.btn--hold {
+  bottom: 7rem;
+}
+
+.dice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(18, 61, 42, 0.2);
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 55%;
+  }
+
+  body {
+    padding: 1.5rem;
+  }
+
+  main {
+    min-height: 70rem;
+  }
+
+  .player {
+    padding: 8rem 1.5rem 3rem;
+  }
+
+  .name {
+    font-size: 2.2rem;
+  }
+
+  .score {
+    font-size: 5.5rem;
+  }
+
+  .player--current {
+    width: 85%;
+    padding: 1.5rem 1rem;
+  }
+
+  .btn {
+    padding: 0.9rem 1.4rem;
+    font-size: 1.3rem;
+    white-space: nowrap;
+  }
+
+  .dice {
+    width: 7rem;
+    height: 7rem;
+  }
+}
