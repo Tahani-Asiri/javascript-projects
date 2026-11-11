@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tahani's JavaScript Projects</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 50px 20px;
+      font-family: Arial, sans-serif;
+      color: #123d2a;
+      background: linear-gradient(135deg, #d8f3dc, #95d5b2, #52b788);
+    }
+
+    main {
+      width: min(950px, 100%);
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 38px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 12px;
+      color: #276749;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 4px;
+    }
+
+    h1 {
+      margin-bottom: 12px;
+      font-size: clamp(32px, 6vw, 54px);
+    }
+
+    .intro {
+      color: #276749;
+      font-size: 18px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      display: block;
+      min-height: 190px;
+      padding: 24px;
+      border: 1px solid #b7e4c7;
+      border-radius: 18px;
+      background: #f0fff4;
+      color: inherit;
+      text-decoration: none;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #e3f7e9;
+    }
+
+    .week {
+      display: block;
+      margin-bottom: 20px;
+      color: #40916c;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .description {
+      margin-bottom: 18px;
+      color: #276749;
+      line-height: 1.5;
+    }
+
+    .open {
+      color: #1b7a4b;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 35px;
+      color: #276749;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">LEARN · PRACTICE · GROW</p>
+      <h1>Tahani's JavaScript Projects</h1>
+      <p class="intro">My weekly projects while learning JavaScript.</p>
+    </header>
+
+    <section class="projects">
+      <a class="card" href="week4/">
+        <span class="week">WEEK 4</span>
+        <h2>JavaScript Practice</h2>
+        <p class="description">My practice work for the fourth week.</p>
+        <span class="open">Open project →</span>
+      </a>
+
+      <a class="card" href="week%205/Guess%20My%20Number/">
+        <span class="week">WEEK 5</span>
+        <h2>Guess My Number</h2>
+        <p class="description">A number guessing game made with JavaScript.</p>
+        <span class="open">Open project →</span>
+      </a>
+
+      <a class="card" href="week%205/Model/">
+        <span class="week">WEEK 5</span>
+        <h2>Learning Journal</h2>
+        <p class="description">A modal project with my learning journal.</p>
+        <span class="open">Open project →</span>
+      </a>
+
+      <a class="card" href="week%205/Pig%20Game/">
+        <span class="week">WEEK 5</span>
+        <h2>Pig Game</h2>
+        <p class="description">A two-player dice game.</p>
+        <span class="open">Open project →</span>
+      </a>
+    </section>
+
+    <footer>Created by Tahani Asiri</footer>
+  </main>
+</body>
+</html>
